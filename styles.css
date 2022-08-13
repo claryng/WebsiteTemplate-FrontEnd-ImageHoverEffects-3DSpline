@@ -1,0 +1,254 @@
+body{
+	margin:0;
+	padding: 0;
+}
+#intro{
+	padding: 0;
+	margin: 0;
+	background-color: #ffd9a7;
+}
+.container-fluid{
+	padding: 0;
+	margin: 0;
+}
+iframe{
+	height: 100vh;
+	width: 100vw;
+}
+.greeting-text{
+	position: absolute;
+	text-align: center;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #590696;
+	font-family: "Ubuntu", serif;
+	font-weight: 500;
+	font-size: 2.75rem;
+	animation: slow 5s;
+	line-height: 1;
+}
+h1 > span{
+	font-size: 1.5rem;
+}
+@keyframes slow {
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+#content1{
+	background-color: #ffd9a7;
+	margin:0;
+	padding:10% 15% 15%;
+}
+.content1-title-div{
+	padding: 0 10% 0 10%;
+}
+.title-content1{
+	font-family: "Montserrat", serif;
+	font-weight: 500;
+	font-size: 2rem;
+	color: #590696;
+	text-align: center;
+	padding-bottom: 3%;
+}
+.wrapper{
+	position: relative;
+	height: 75vh;
+}
+#content2,#content3{
+	margin:0;
+	padding:5% 0 5%;
+	box-sizing: border-box;
+	font-family: 'Ubuntu', serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #ffd9a7;
+	color: #590696;
+}
+.container{
+	position: relative;
+	width: 70%;
+	height: 75vh;
+	background: #CF8CFF;
+}
+.container .clip{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+}
+.container .clip.clip1{
+	background: url(clippath1.jpeg);
+	background-size: cover;
+	clip-path: polygon(0 0, 48% 0, 17% 100%, 0% 100%);
+}
+.container .clip.clip2{
+	background: url(clippath2.jpeg);
+	background-size: cover;
+	clip-path: polygon(48% 0, 100% 0, 50% 100%, 17% 100%);
+}
+.container .clip.clip3{
+	background: url(clippath3.jpeg);
+	background-size: cover;
+	clip-path: polygon(100% 0, 100% 0, 100% 100%, 50% 100%);
+} 
+.container:hover .clip{
+	clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.container .clip:hover{
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.content{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 20px;
+	background-color: #FFDEA6;
+	opacity: 0;
+	transition: 0.5s;
+}
+.container .clip:hover .content{
+	bottom: 0;
+	opacity: 1;
+}
+.content2-title-div, .content3-title-div{
+	position: absolute;
+	top: 230%;
+	font-family: "Montserrat", serif;
+	font-weight: 500;
+	font-size: 2rem;
+	text-align: center;
+	padding: 5% 25% 3%;
+}
+.content3-title-div{
+	top:353%;
+}
+.container2{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	width: 70%;
+	height: 100vh;
+	color: #FFDEA6;
+	transform-style: preserve-3d;
+}
+.container2 .box{
+	position: relative;
+	width: 100%;
+	height: 50%;
+	margin: 60px 0;
+	background: #FFDEA6;
+	transform-style: preserve-3d;
+}
+.container2 .box .imgBx{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.container2 .box .imgBx img{
+	width: 100%;
+	height: 100%;
+}
+.container2 .box .contentBx{
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	right: 50px;
+	background: #CF8CFF;
+	transform: translateZ(20px) scaleY(0);
+	padding: 40px 25px;
+	transform-origin: top;
+	transition: 0.5s;
+	transform-style: preserve-3d;
+}
+.container2 .box:hover{
+	box-shadow: 0 50px 80px rgba(0,0,0,.2);
+}
+.container2 .box:hover .contentBx{
+	transform: translateZ(50px) scaleY(1);
+}
+#content4{
+	background-color: #ffd9a7;
+	margin:0;
+	padding:0;
+}
+.container3{
+	margin: 3% auto 0;
+	padding:0;
+	width: 88vw;
+	min-height: 100vh;
+	background: #ffd9a7;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.container3 .box2{
+	position: relative;
+	width: 400px;
+	height: 300px;
+	background: #CF8CFF;
+	margin: 10px;
+	box-sizing: border-box;
+	display: inline-block;
+}
+.container3 .box2 .imgBox{
+	position: relative;
+	overflow: hidden;
+}
+.container3 .box2 .imgBox img{
+	max-width: 100%;
+	height:300px;
+	transition: transform 2s;
+}
+.container3 .box2:hover .imgBox img{
+	transform: scale(1.5);
+}
+.container3 .box2 .details{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	bottom: 10px;
+	right: 10px;
+	background: rgba(0,0,0,.5);
+	transform: scale(0);
+	transition: transform .5s;
+}
+.container3 .box2:hover .details{
+	transform: scale(1);
+}
+.container3 .box2 .details .content-imgBox{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	padding: 15px;
+	color: #ffd9a7;
+}
+.container3 .box2 .details .content-imgBox h2{
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	font-family: "Montserrat",sans-serif;
+}
+.content4-title{
+	text-align: center;
+	color: #590696;
+}
+.content4-title h2{
+	font-family: "Ubuntu",serif;
+	font-size: 3rem;
+	font-weight: 500;
+}
